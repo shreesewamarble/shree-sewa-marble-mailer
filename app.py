@@ -1,7 +1,10 @@
 from flask import Flask, request, jsonify, render_template_string
 from flask_cors import CORS
+from dotenv import load_dotenv
 import smtplib
 import os
+
+load_dotenv()
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase

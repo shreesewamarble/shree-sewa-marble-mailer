@@ -18,9 +18,22 @@ shree-sewa-marble-mailer/
 ├── app.py           # Main app
 ├── requirements.txt # Dependencies
 ├── vercel.json      # Vercel config
+├── .env.example     # Environment variable template
 ├── .gitignore
 └── README.md
 ```
+
+## 💻 Local Development
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env   # then fill in SMTP_PASSWORD
+python app.py
+```
+
+The app reads `.env` automatically and runs at `http://localhost:5000`.
 
 ## 🛠️ API Usage
 
@@ -42,6 +55,7 @@ shree-sewa-marble-mailer/
 {
   "ok": true,
   "message": "Message sent successfully!"
+}
 ```
 
 ## ⚙️ Environment Variables (Vercel)
